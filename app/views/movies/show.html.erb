@@ -15,6 +15,9 @@
   <dt>Description</dt>
   <dd><%= @movie.description %></dd>
 
+  <dt>Director</dt>
+  <%= select_tag(:director_id, options_from_collection_for_select(Director.all, :id, :name, @movie.director_id)) %>
+  
   <dt>Director ID</dt>
   <dd><%= @movie.director_id %></dd>
 
