@@ -38,6 +38,7 @@ class MoviesController < ApplicationController
     @movie.description = params[:description]
     @movie.director_id = params[:director_id]
     @movie.image_url = params[:image_url]
+    @movie_director = Director.find(@movie.director_id)
     
     @movie.save
 
